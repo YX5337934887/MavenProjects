@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-name="acct_authority" match-catalog="test"></table-filter>
+	<table-filter match-name="acct_role" match-catalog="test"></table-filter>
+	<table-filter match-name="acct_role_authority"
+		match-catalog="test">
+	</table-filter>
+	<table-filter match-name="acct_user" match-catalog="test"></table-filter>
+	<table-filter match-name="acct_user_role" match-catalog="test"></table-filter>
+	<table catalog="test" name="acct_role_authority" class="org.generator.entity.Acct_role_authority" schema="test">
+		<column name="role_id"></column>
+		<column name="authority_id"></column>
+		<column name="role_id"></column>
+		<column name="authority_id"></column>
+	</table>
+	<table catalog="test" name="acct_user" class="org.generator.entity.Acct_user" schema="test">
+		<column name="id"></column>
+		<column name="nick_name"></column>
+		<column name="telephone"></column>
+		<column name="register_time"></column>
+	</table>
+	<table catalog="test" name="acct_user_role" class="org.generator.entity.Acct_user_role" schema="test">
+		<column name="role_id"></column>
+		<column name="user_id"></column>
+		<column name="role_id"></column>
+		<column name="user_id"></column>
+	</table>
+	<table catalog="test" name="acct_authority" class="org.generator.entity.Acct_authority" schema="test">
+		<column name="id"></column>
+		<column name="name"></column>
+	</table>
+	<table catalog="test" name="acct_role" class="org.generator.entity.Acct_role" schema="test">
+		<column name="id"></column>
+		<column name="name"></column>
+	</table>
+</hibernate-reverse-engineering>

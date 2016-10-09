@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table catalog="smallshop" name="goods"
+		class="org.generator.demo.Goods">
+		<column name="id"></column>
+		<column name="click"></column>
+		<column name="context"></column>
+		<column name="img"></column>
+		<column name="isT"></column>
+		<column name="name"></column>
+		<column name="num"></column>
+		<column name="price"></column>
+		<column name="status"></column>
+		<column name="time"></column>
+		<column name="type"></column>
+		<column name="goodType_id"></column>
+	</table>
+	<table catalog="smallshop" name="car"
+		class="org.generator.demo.Car">
+		<column name="id"></column>
+		<column name="num"></column>
+		<column name="goods_id"></column>
+		<column name="orders_id"></column>
+	</table>
+	<table catalog="smallshop" name="notice"
+		class="org.generator.demo.Notice">
+		<column name="id"></column>
+		<column name="text"></column>
+		<column name="time"></column>
+	</table>
+	<table catalog="smallshop" name="userinfo"
+		class="org.generator.demo.UserInfo">
+		<column name="id"></column>
+		<column name="address"></column>
+		<column name="money"></column>
+		<column name="nname"></column>
+		<column name="qq"></column>
+		<column name="uname"></column>
+		<column name="upass"></column>
+	</table>
+	<table catalog="smallshop" name="money"
+		class="org.generator.demo.Money">
+		<column name="id"></column>
+		<column name="code"></column>
+		<column name="money"></column>
+		<column name="status"></column>
+		<column name="user_id"></column>
+	</table>
+	<table catalog="smallshop" name="admininfo"
+		class="org.generator.demo.AdminInfo">
+		<column name="id"></column>
+		<column name="nname"></column>
+		<column name="uname"></column>
+		<column name="upass"></column>
+	</table>
+	<table catalog="smallshop" name="goodstype"
+		class="org.generator.demo.GoodsType">
+		<column name="id"></column>
+		<column name="name"></column>
+	</table>
+	<table catalog="smallshop" name="orders"
+		class="org.generator.demo.Orders">
+		<column name="id"></column>
+		<column name="money"></column>
+		<column name="status"></column>
+		<column name="time"></column>
+		<column name="user_id"></column>
+	</table>
+</hibernate-reverse-engineering>

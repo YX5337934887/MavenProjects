@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-9-5 22:56:24 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="org.generator.demo.AdminInfo" table="admininfo" catalog="smallshop">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nname" type="string">
+            <column name="nname" />
+        </property>
+        <property name="uname" type="string">
+            <column name="uname" />
+        </property>
+        <property name="upass" type="string">
+            <column name="upass" />
+        </property>
+    </class>
+</hibernate-mapping>

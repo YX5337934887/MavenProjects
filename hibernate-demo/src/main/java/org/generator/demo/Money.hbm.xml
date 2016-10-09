@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-9-5 22:56:24 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="org.generator.demo.Money" table="money" catalog="smallshop">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userInfo" class="org.generator.demo.UserInfo" fetch="select">
+            <column name="user_id" />
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="code" />
+        </property>
+        <property name="money" type="double">
+            <column name="money" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="status" />
+        </property>
+    </class>
+</hibernate-mapping>

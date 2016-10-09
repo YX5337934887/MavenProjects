@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-9-5 22:56:24 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="org.generator.demo.UserInfo" table="userinfo" catalog="smallshop">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="address" type="string">
+            <column name="address" />
+        </property>
+        <property name="money" type="double">
+            <column name="money" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="nname" type="string">
+            <column name="nname" />
+        </property>
+        <property name="qq" type="string">
+            <column name="qq" />
+        </property>
+        <property name="uname" type="string">
+            <column name="uname" />
+        </property>
+        <property name="upass" type="string">
+            <column name="upass" />
+        </property>
+        <set name="orderses" table="orders" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="org.generator.demo.Orders" />
+        </set>
+        <set name="moneys" table="money" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="org.generator.demo.Money" />
+        </set>
+    </class>
+</hibernate-mapping>
